@@ -1,5 +1,7 @@
 # vue_controle_de_ponto
 
+View demo: https://duckcodecontroleponto.netlify.com/
+
 ## Project setup
 ```
 npm install
