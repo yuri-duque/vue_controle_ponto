@@ -15,12 +15,12 @@
       </div>
 
       <div class="d-flex justify-content-between mb-0">
-        <p class="informacao mb-0">Saída almoço:</p>
+        <p class="informacao mb-0">Saída:</p>
         <p class="horario mb-0">{{ponto.saidaAlmoco}}</p>
       </div>
 
       <div class="d-flex justify-content-between mb-0">
-        <p class="informacao mb-0">Retorno almoço:</p>
+        <p class="informacao mb-0">Retorno:</p>
         <p class="horario mb-0">{{ponto.retornoAlmoco}}</p>
       </div>
 
