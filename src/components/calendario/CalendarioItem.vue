@@ -1,11 +1,11 @@
 <template>
   <card class="w-100">
     <div
-      class="d-flex justify-content-between mb-0 rounded pl-2 pr-2 pt-2 pb-0"
+      class="mesHora d-flex justify-content-between mb-0 rounded pl-2 pr-2 pt-2 pb-0"
       :class="ponto.totalHoras < ponto.meta ? 'bg-danger' : 'bg-success'"
     >
-      <p class="font-weight-bold mb-0">{{ponto.totalHoras}}</p>
       <h6 class="font-weight-bold">{{ponto.dia}}</h6>
+      <p class="font-weight-bold mb-0">{{ponto.totalHoras}}</p>
     </div>
 
     <div class="p-2">
@@ -146,6 +146,10 @@ export default {
 @media screen and (max-width: 750px) {
   .informacao {
     display: none;
+  }
+
+  .mesHora {
+    display: block !important;
   }
 }
 
