@@ -51,7 +51,6 @@ export default {
   },
 
   mounted() {
-    debugger;
     this.getPonto(this.dia);
   },
 
