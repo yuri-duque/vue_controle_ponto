@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <Calendario :month="10" :year="2019" />
+    <Calendario :propDate="date" />
   </div>
 </template>
 
@@ -12,6 +12,16 @@ export default {
   name: "calendario",
   components: {
     Calendario
+  },
+
+  data() {
+    return {
+      date: null
+    };
+  },
+
+  created() {
+    this.date = new Date();
   }
 };
 </script>
