@@ -3,8 +3,10 @@
     <Card class="rounded">
       <CalendarioHeader :date="date" @eventNavigation="navigation($event)" />
 
-      <div class="d-inline-flex col_1/14 m-1 item" :key="index" v-for="(item, index) in pontos">
-        <CalendarioItem :day="item.day" :inputs="item.inputs" />
+      <div class="py-2">
+        <div class="d-inline-flex col_1/14 m-1 item" :key="index" v-for="(item, index) in pontos">
+          <CalendarioItem :day="item.day" :inputs="item.inputs" />
+        </div>
       </div>
     </Card>
   </div>
@@ -233,7 +235,31 @@ export default {
 
 <style scoped>
 .col_1\/14 {
-  width: 12%;
+  width: 13.2%;
+}
+
+@media screen and (max-width: 1100px) {
+  .col_1\/14 {
+    width: 13% !important;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .col_1\/14 {
+    width: 12.5% !important;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .col_1\/14 {
+    width: 12% !important;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .col_1\/14 {
+    width: 11% !important;
+  }
 }
 
 .item {

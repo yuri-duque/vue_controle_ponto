@@ -1,5 +1,5 @@
 <template>
-  <div class="card-header header rounded ml-2 mr-2 d-flex justify-content-between">
+  <div class="card-header header rounded d-flex justify-content-between">
     <button class="btn" @click="anterior">
       <font-awesome-icon icon="chevron-left" class="icon" />
     </button>

@@ -58,7 +58,20 @@ export default {
   transition: opacity 2s;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 992px) {
+  .informacao {
+    display: none;
+  }
+
+  .mesHora {
+    display: block !important;
+  }
+}
+
+@media screen and (max-width: 800px) {
+}
+
+@media screen and (max-width: 500px) {
   .informacao {
     display: none;
   }
