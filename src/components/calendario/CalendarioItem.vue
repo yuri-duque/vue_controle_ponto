@@ -50,10 +50,12 @@ export default {
 <style scoped>
 .mesPassado {
   filter: opacity(0.4) grayscale(100%);
+  transition: opacity 2s linear;
 }
 
 .mesAtual {
   filter: opacity(0.8);
+  transition: opacity 2s;
 }
 
 @media screen and (max-width: 750px) {
@@ -63,6 +65,14 @@ export default {
 
   .mesHora {
     display: block !important;
+  }
+
+  h6 {
+    font-size: 0.8rem;
+  }
+
+  p {
+    font-size: 10px !important;
   }
 }
 

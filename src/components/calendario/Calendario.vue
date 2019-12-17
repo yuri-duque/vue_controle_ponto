@@ -1,9 +1,9 @@
 <template>
   <div>
-    <Card class="pb-2 rounded">
+    <Card class="rounded">
       <CalendarioHeader :date="date" @eventNavigation="navigation($event)" />
 
-      <div class="d-inline-flex col_1/14 m-1" :key="index" v-for="(item, index) in pontos">
+      <div class="d-inline-flex col_1/14 m-1 item" :key="index" v-for="(item, index) in pontos">
         <CalendarioItem :day="item.day" :inputs="item.inputs" />
       </div>
     </Card>
@@ -233,6 +233,10 @@ export default {
 
 <style scoped>
 .col_1\/14 {
-  width: 13.5%;
+  width: 12%;
+}
+
+.item {
+  transition: 1s;
 }
 </style>

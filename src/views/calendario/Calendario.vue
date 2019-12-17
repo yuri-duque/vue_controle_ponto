@@ -27,4 +27,9 @@ export default {
 </script>
 
 <style scoped>
+@media screen and (max-width: 750px) {
+  .container {
+    max-width: 100% !important;
+  }
+}
 </style>

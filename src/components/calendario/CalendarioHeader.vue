@@ -1,13 +1,13 @@
 <template>
   <div class="card-header header rounded ml-2 mr-2 d-flex justify-content-between">
     <button class="btn" @click="anterior">
-      <font-awesome-icon icon="chevron-left" />
+      <font-awesome-icon icon="chevron-left" class="icon" />
     </button>
 
     <h4 class="mt-2">{{monthName}} - {{year}}</h4>
 
     <button class="btn" @click="proximo">
-      <font-awesome-icon icon="chevron-right" />
+      <font-awesome-icon icon="chevron-right" class="icon" />
     </button>
   </div>
 </template>
@@ -58,5 +58,11 @@ export default {
 <style scoped>
 .header {
   background-color: white;
+}
+
+@media screen and (max-width: 750px) {
+  h4 {
+    font-size: 1.2rem;
+  }
 }
 </style>
