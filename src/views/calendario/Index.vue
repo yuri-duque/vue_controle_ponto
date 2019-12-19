@@ -1,17 +1,19 @@
 <template>
   <div class="container">
+    <Form/>
     <Calendario :propDate="date" />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
+import Form from './Form'
 import Calendario from "@/components/calendario/Calendario.vue";
 
 export default {
   name: "calendario",
   components: {
-    Calendario
+    Calendario,
+    Form
   },
 
   data() {

@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Calendario from '../views/calendario/Calendario.vue'
+import Calendario from '../views/calendario/Index.vue'
 
 Vue.use(VueRouter)
 
