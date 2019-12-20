@@ -33,7 +33,6 @@ export default {
 
   methods:{
     openDetalhes(){
-      debugger;
       this.showDetalhes = true;
     },
 

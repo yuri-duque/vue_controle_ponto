@@ -53,7 +53,6 @@ export default {
 
   methods: {
     detalhes(ponto){
-      debugger;
       this.$emit("detalhes", ponto);
     },
 
