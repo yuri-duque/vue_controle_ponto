@@ -1,14 +1,14 @@
 <template>
   <card class="w-100" :class="inputs.isMesPassado ? 'mesPassado' : 'mesAtual'">
     <div
-      class="mesHora d-flex justify-content-between mb-0 rounded pl-2 pr-2 pt-2 pb-0"
+      class="mesHora d-flex justify-content-between mb-0 rounded pt-2 pb-0"
       :class="inputs.totalHoras < inputs.meta ? 'bg-danger' : 'bg-success'"
     >
       <h6 class="font-weight-bold">{{day.dia}}</h6>
       <p class="font-weight-bold mb-0">{{inputs.totalHoras}}</p>
     </div>
 
-    <div class="p-2">
+    <div class="p-2 entradas">
       <div class="d-flex justify-content-between mb-0">
         <p class="informacao mb-0">Entrada:</p>
         <p class="horario mb-0">{{inputs.entrada}}</p>
@@ -62,9 +62,20 @@ export default {
   transition: opacity 2s;
 }
 
+@media screen and (min-width: 992px) {
+  .mesHora {
+    padding-left: .5rem !important;
+    padding-right: .5rem !important;
+  }
+}
+
 @media screen and (max-width: 992px) {
   .informacao {
     display: none;
+  }
+
+  .horario{
+    text-align: center
   }
 
   .mesHora {
@@ -82,6 +93,10 @@ export default {
 
   .mesHora {
     display: block !important;
+  }
+
+  .entradas{
+    display: none
   }
 
   h6 {
