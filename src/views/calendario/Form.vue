@@ -11,22 +11,28 @@
       :cancelButton="cancelButton"
       @close="close()"
     >
-      jlaskjdfhasçf~çlknl ioknflknj kjçlnhsdfçj
+      <datepicker v-model="data" name="uniquename" :language="pt" format="dd/MM/yyyy"></datepicker>
     </modal>
   </div>
 </template>
 
 <script>
+import Datepicker from 'vuejs-datepicker';
 import Modal from "@/components/Modal";
+import pt from "vuejs-datepicker/dist/locale/translations/pt-BR"
 
 export default {
   components: {
-    Modal
+    Modal,
+    Datepicker
   },
 
   data() {
     return {
       show: false,
+      pt: pt,
+
+      data: null,
 
       saveButton: {
         title: "Salvar",
@@ -44,7 +50,7 @@ export default {
   methods: {
     close() {
       this.show = false;
-    }
+    },
   }
 };
 </script>
