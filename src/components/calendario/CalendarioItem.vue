@@ -1,5 +1,5 @@
 <template>
-  <card class="w-100" :class="inputs.isMesPassado ? 'mesPassado' : 'mesAtual' ">
+  <card class="w-100" :class="inputs.isMesPassado ? 'mesPassado' : 'mesAtual'">
     <div
       class="mesHora d-flex justify-content-between mb-0 rounded pl-2 pr-2 pt-2 pb-0"
       :class="inputs.totalHoras < inputs.meta ? 'bg-danger' : 'bg-success'"
@@ -43,6 +43,10 @@ export default {
   props: {
     day: Object,
     inputs: Object
+  },
+
+  methods:{
+
   }
 };
 </script>

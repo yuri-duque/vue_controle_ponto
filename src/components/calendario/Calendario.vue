@@ -4,8 +4,8 @@
       <CalendarioHeader :date="date" @eventNavigation="navigation($event)" />
 
       <div class="py-2">
-        <div class="d-inline-flex col_1/14 m-1 item" :key="index" v-for="(item, index) in pontos">
-          <CalendarioItem :day="item.day" :inputs="item.inputs" />
+        <div class="d-inline-flex col_1/14 m-1 item cursor" :key="index" v-for="(item, index) in pontos" @click="detalhes(item)">
+          <CalendarioItem :day="item.day" :inputs="item.inputs"/>
         </div>
       </div>
     </Card>
@@ -52,6 +52,11 @@ export default {
   },
 
   methods: {
+    detalhes(ponto){
+      debugger;
+      this.$emit("detalhes", ponto);
+    },
+
     preencherCalendario() {
       this.pontos = [];
       this.month = this.date.getMonth();

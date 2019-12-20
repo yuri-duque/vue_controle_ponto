@@ -1,12 +1,8 @@
 <template>
   <div>
-    <div class="mb-2 d-flex flex-row-reverse">
-      <button class="btn btn-success font-weight-bold" @click="show=true">Novo Ponto</button>
-    </div>
-
     <modal
       :show="show"
-      title="Novo Ponto"
+      title="Detalhes"
       :saveButton="saveButton"
       :cancelButton="cancelButton"
       @close="close()"
@@ -24,10 +20,12 @@ export default {
     Modal
   },
 
+  props:{
+      show: Boolean
+  },
+
   data() {
     return {
-      show: false,
-
       saveButton: {
         title: "Salvar",
         visible: true,
@@ -43,7 +41,7 @@ export default {
 
   methods: {
     close() {
-      this.show = false;
+      this.$emit("close")
     }
   }
 };

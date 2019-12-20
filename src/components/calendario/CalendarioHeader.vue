@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import NomesMes from "../../assets/nomesMes.js";
+import NomesMes from "../../assets/js/nomesMes.js";
 
 export default {
   props: {

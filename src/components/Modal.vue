@@ -4,18 +4,20 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <!-- Cabeçalho do Modal -->
-          <div class="modal-header">
-            <h2>Apresentando Modal</h2>
+          <div class="modal-header d-flex justify-content-between align-middle">
+            <p class="font-weight-bold mb-0 title">{{title}}</p>
+            <font-awesome-icon icon="times" class="icon cursor title mt-1" @click="close" />
           </div>
 
           <!-- Corpo do Modal -->
           <div class="modal-body">
-            <p>Mostrando Modal em BootStrap</p>
+            <slot></slot>
           </div>
 
           <!-- Rodapé do Modal -->
-          <div class="modal-footer">
-            <button class="btn btn-danger" @click="close()">Fechar Modal</button>
+          <div class="modal-footer d-flex justify-content-between">
+            <button type="button" class="btn btn-danger" @click="close">{{textCancelButton}}</button>
+            <button type="button" class="btn btn-success" @click="save">{{textSaveButton}}</button>
           </div>
         </div>
       </div>
@@ -31,20 +33,20 @@ export default {
 
     title: String,
 
-    saveButton: {
-      type: Object,
-      default: () => ({})
-    },
+    isSaveButton: Boolean,
+    textSaveButton: { type: String, default: "Salvar" },
 
-    cancelButton: {
-      type: Object,
-      default: () => ({})
-    }
+    isCancelButton: Boolean,
+    textCancelButton: { type: String, default: "Cancelar" },
   },
 
   methods: {
     close() {
       this.$emit("close");
+    },
+
+    save(){
+      this.$emit("save");
     }
   }
 };
@@ -73,21 +75,11 @@ export default {
   animation: slide-down 0.5s ease;
 }
 
-@keyframes slide-up {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+.modal-header {
+  padding: 10px;
 }
 
-@keyframes slide-down {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
+.title {
+  font-size: 19px;
 }
 </style>

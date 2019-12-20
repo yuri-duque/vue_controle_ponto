@@ -1,29 +1,45 @@
 <template>
   <div class="container">
     <Form/>
-    <Calendario :propDate="date" />
+    <Detalhes :show="showDetalhes" @close="closeDetalhes"/>
+    <Calendario :propDate="date" @detalhes="openDetalhes($event)"/>
   </div>
 </template>
 
 <script>
-import Form from './Form'
+import Form from './Form';
+import Detalhes from './Detalhes';
 import Calendario from "@/components/calendario/Calendario.vue";
 
 export default {
   name: "calendario",
   components: {
     Calendario,
-    Form
+    Form,
+    Detalhes
   },
 
   data() {
     return {
-      date: null
+      date: null,
+
+      showDetalhes: false
     };
   },
 
   created() {
     this.date = new Date();
+  },
+
+  methods:{
+    openDetalhes(){
+      debugger;
+      this.showDetalhes = true;
+    },
+
+    closeDetalhes(){
+      this.showDetalhes = false;
+    }
   }
 };
 </script>
