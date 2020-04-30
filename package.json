@@ -14,7 +14,7 @@
     "@innologica/vue-stackable-modal": "^0.1.9",
     "bootstrap": "^4.3.1",
     "core-js": "^3.3.2",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "moment": "^2.24.0",
     "popper.js": "^1.16.0",
     "vee-validate": "^2.2.15",
